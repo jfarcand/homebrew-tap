@@ -41,14 +41,28 @@ class IphoneMirroirMcp < Formula
       Start the helper daemon (requires root for Karabiner HID access):
         sudo brew services start iphone-mirroir-mcp
 
-      Add to your MCP client config (.mcp.json):
-        {
-          "mcpServers": {
-            "iphone-mirroring": {
-              "command": "#{opt_bin}/iphone-mirroir-mcp"
+      MCP server binary:
+        #{opt_bin}/iphone-mirroir-mcp
+
+      Add to your MCP client config:
+
+        Claude Code (.mcp.json in project root or ~/.claude.json):
+          {
+            "mcpServers": {
+              "iphone-mirroring": {
+                "command": "#{opt_bin}/iphone-mirroir-mcp"
+              }
             }
           }
-        }
+
+        Claude Desktop (~/Library/Application Support/Claude/claude_desktop_config.json):
+          {
+            "mcpServers": {
+              "iphone-mirroring": {
+                "command": "#{opt_bin}/iphone-mirroir-mcp"
+              }
+            }
+          }
 
       Grant Screen Recording + Accessibility permissions to your terminal app.
     EOS
