@@ -1,8 +1,8 @@
 class IphoneMirroirMcp < Formula
   desc "MCP server for controlling iPhone through macOS iPhone Mirroring"
   homepage "https://github.com/jfarcand/iphone-mirroir-mcp"
-  url "https://github.com/jfarcand/iphone-mirroir-mcp/archive/refs/tags/v0.6.1.tar.gz"
-  sha256 "ac88a6e3183d6046cd5e4005296673dd2bac5b2dce36e48590e29bcf3d4889b2"
+  url "https://github.com/jfarcand/iphone-mirroir-mcp/archive/refs/tags/v0.7.0.tar.gz"
+  sha256 "c13b5a2605d1fe2c06b2e2715266e271bb6dbd4cae2ffef7aae03c193534be35"
   license "Apache-2.0"
 
   depends_on :macos
