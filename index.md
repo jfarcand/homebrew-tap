@@ -18,7 +18,7 @@ brew install iphone-mirroir-mcp
 
 | Formula | Version | Description |
 |---------|---------|-------------|
-| [iphone-mirroir-mcp](https://github.com/jfarcand/iphone-mirroir-mcp) | 0.11.0 | MCP server for controlling iPhone through macOS iPhone Mirroring |
+| [iphone-mirroir-mcp](https://github.com/jfarcand/iphone-mirroir-mcp) | 0.11.1 | MCP server for controlling iPhone through macOS iPhone Mirroring |
 
 ## Post-Install Setup
 
