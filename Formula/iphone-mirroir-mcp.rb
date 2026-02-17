@@ -49,7 +49,7 @@ class IphoneMirroirMcp < Formula
         Claude Code (.mcp.json in project root or ~/.claude.json):
           {
             "mcpServers": {
-              "iphone-mirroring": {
+              "mirroir": {
                 "command": "#{opt_bin}/iphone-mirroir-mcp"
               }
             }
@@ -58,7 +58,7 @@ class IphoneMirroirMcp < Formula
         Claude Desktop (~/Library/Application Support/Claude/claude_desktop_config.json):
           {
             "mcpServers": {
-              "iphone-mirroring": {
+              "mirroir": {
                 "command": "#{opt_bin}/iphone-mirroir-mcp"
               }
             }

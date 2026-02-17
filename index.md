@@ -39,7 +39,7 @@ Grant **Screen Recording** and **Accessibility** permissions to your terminal ap
 ```json
 {
   "mcpServers": {
-    "iphone-mirroring": {
+    "mirroir": {
       "command": "/opt/homebrew/bin/iphone-mirroir-mcp"
     }
   }
