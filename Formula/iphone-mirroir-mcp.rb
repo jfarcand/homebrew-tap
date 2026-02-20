@@ -1,8 +1,8 @@
 class IphoneMirroirMcp < Formula
   desc "MCP server for controlling iPhone through macOS iPhone Mirroring"
   homepage "https://github.com/jfarcand/iphone-mirroir-mcp"
-  url "https://github.com/jfarcand/iphone-mirroir-mcp/archive/refs/tags/v0.13.0.tar.gz"
-  sha256 "99723ba9756564efbe6700b95e20b93d6a7a6b7b27bf60a4228597b554416548"
+  url "https://github.com/jfarcand/iphone-mirroir-mcp/archive/refs/tags/v0.14.0.tar.gz"
+  sha256 "a69e63cb2a5a55eacb279b0ea89ae1198caac9ba8a4a81ab5bfd52e02ac86abb"
   license "Apache-2.0"
 
   depends_on :macos
@@ -23,39 +23,28 @@ class IphoneMirroirMcp < Formula
 
   def caveats
     <<~EOS
-      Karabiner-Elements is required for tap/type/swipe to work:
-        brew install --cask karabiner-elements
+      The standalone Karabiner DriverKit package is required for tap/type/swipe.
+      Download from: https://github.com/pqrs-org/Karabiner-DriverKit-VirtualHIDDevice/releases
+      Or if you already have Karabiner-Elements installed, it works too.
 
-      After installing Karabiner, add this device ignore rule to
-      ~/.config/karabiner/karabiner.json (inside your profile's "devices" array):
+      After installing the DriverKit package, approve the system extension:
+        System Settings > General > Login Items & Extensions
 
-        {
-          "identifiers": {
-            "is_keyboard": true,
-            "product_id": 592,
-            "vendor_id": 1452
-          },
-          "ignore": true
-        }
-
-      Start the helper daemon (requires root for Karabiner HID access):
+      Start the helper daemon (requires root for DriverKit HID access):
         sudo brew services start iphone-mirroir-mcp
+
+      Verify your setup:
+        #{opt_bin}/iphone-mirroir-mcp doctor
 
       MCP server binary:
         #{opt_bin}/iphone-mirroir-mcp
 
       Add to your MCP client config:
 
-        Claude Code (.mcp.json in project root or ~/.claude.json):
-          {
-            "mcpServers": {
-              "mirroir": {
-                "command": "#{opt_bin}/iphone-mirroir-mcp"
-              }
-            }
-          }
+        Claude Code:
+          claude mcp add --transport stdio mirroir -- #{opt_bin}/iphone-mirroir-mcp
 
-        Claude Desktop (~/Library/Application Support/Claude/claude_desktop_config.json):
+        Cursor (.cursor/mcp.json):
           {
             "mcpServers": {
               "mirroir": {
