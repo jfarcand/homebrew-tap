@@ -6,11 +6,11 @@ Homebrew formulae for [jfarcand](https://github.com/jfarcand) projects.
 
 ```bash
 brew tap jfarcand/tap
-brew install iphone-mirroir-mcp
+brew install mirroir-mcp
 ```
 
 ## Formulae
 
 | Formula | Description |
 |---------|-------------|
-| [iphone-mirroir-mcp](https://github.com/jfarcand/iphone-mirroir-mcp) | MCP server for controlling iPhone through macOS iPhone Mirroring |
+| [mirroir-mcp](https://github.com/jfarcand/mirroir-mcp) | MCP server for controlling iPhone and any macOS window |

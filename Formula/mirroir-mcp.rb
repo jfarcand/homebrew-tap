@@ -1,8 +1,8 @@
-class IphoneMirroirMcp < Formula
-  desc "MCP server for controlling iPhone through macOS iPhone Mirroring"
-  homepage "https://github.com/jfarcand/iphone-mirroir-mcp"
-  url "https://github.com/jfarcand/iphone-mirroir-mcp/archive/refs/tags/v0.14.1.tar.gz"
-  sha256 "0628a8c4d557a466ba6165c522d411444cddd7b22c38df164bf54c108baae79d"
+class MirroirMcp < Formula
+  desc "MCP server for controlling iPhone and any macOS window"
+  homepage "https://github.com/jfarcand/mirroir-mcp"
+  url "https://github.com/jfarcand/mirroir-mcp/archive/refs/tags/v0.15.0.tar.gz"
+  sha256 "5cfe872365a7fcd552c8ac66085d96af48d6f60db73a3b2caa57604b0f3a69f3"
   license "Apache-2.0"
 
   depends_on :macos
@@ -10,14 +10,14 @@ class IphoneMirroirMcp < Formula
 
   def install
     system "swift", "build", "-c", "release", "--disable-sandbox"
-    bin.install ".build/release/iphone-mirroir-mcp"
-    bin.install ".build/release/iphone-mirroir-helper"
+    bin.install ".build/release/mirroir-mcp"
+    bin.install ".build/release/mirroir-helper"
   end
 
   service do
-    run [opt_bin/"iphone-mirroir-helper"]
+    run [opt_bin/"mirroir-helper"]
     keep_alive true
-    error_log_path var/"log/iphone-mirroir-helper.log"
+    error_log_path var/"log/mirroir-helper.log"
     require_root true
   end
 
@@ -31,24 +31,24 @@ class IphoneMirroirMcp < Formula
         System Settings > General > Login Items & Extensions
 
       Start the helper daemon (requires root for DriverKit HID access):
-        sudo brew services start iphone-mirroir-mcp
+        sudo brew services start mirroir-mcp
 
       Verify your setup:
-        #{opt_bin}/iphone-mirroir-mcp doctor
+        #{opt_bin}/mirroir-mcp doctor
 
       MCP server binary:
-        #{opt_bin}/iphone-mirroir-mcp
+        #{opt_bin}/mirroir-mcp
 
       Add to your MCP client config:
 
         Claude Code:
-          claude mcp add --transport stdio mirroir -- #{opt_bin}/iphone-mirroir-mcp
+          claude mcp add --transport stdio mirroir -- #{opt_bin}/mirroir-mcp
 
         Cursor (.cursor/mcp.json):
           {
             "mcpServers": {
               "mirroir": {
-                "command": "#{opt_bin}/iphone-mirroir-mcp"
+                "command": "#{opt_bin}/mirroir-mcp"
               }
             }
           }
@@ -58,6 +58,6 @@ class IphoneMirroirMcp < Formula
   end
 
   test do
-    assert_match "iphone-mirroir-mcp", shell_output("#{bin}/iphone-mirroir-mcp --help 2>&1", 1)
+    assert_match "mirroir-mcp", shell_output("#{bin}/mirroir-mcp --help 2>&1", 1)
   end
 end
