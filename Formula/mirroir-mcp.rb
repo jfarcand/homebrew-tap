@@ -1,8 +1,8 @@
 class MirroirMcp < Formula
   desc "MCP server for controlling iPhone and any macOS window"
   homepage "https://github.com/jfarcand/mirroir-mcp"
-  url "https://github.com/jfarcand/mirroir-mcp/archive/refs/tags/v0.18.0.tar.gz"
-  sha256 "0cc60440965a2e08c66425cfff7734eaab8e5022f0b81700c0a5fb19ffa55787"
+  url "https://github.com/jfarcand/mirroir-mcp/archive/refs/tags/v0.19.0.tar.gz"
+  sha256 "75a1386823b8c56cb7e248962371735ba94cdd4bff217c82ed9e329c485f0c70"
   license "Apache-2.0"
 
   depends_on :macos
@@ -11,28 +11,11 @@ class MirroirMcp < Formula
   def install
     system "swift", "build", "-c", "release", "--disable-sandbox"
     bin.install ".build/release/mirroir-mcp"
-    bin.install ".build/release/mirroir-helper"
-  end
-
-  service do
-    run [opt_bin/"mirroir-helper"]
-    keep_alive true
-    error_log_path var/"log/mirroir-helper.log"
-    require_root true
+    bin.install_symlink "mirroir-mcp" => "mirroir"
   end
 
   def caveats
     <<~EOS
-      The standalone Karabiner DriverKit package is required for tap/type/swipe.
-      Download from: https://github.com/pqrs-org/Karabiner-DriverKit-VirtualHIDDevice/releases
-      Or if you already have Karabiner-Elements installed, it works too.
-
-      After installing the DriverKit package, approve the system extension:
-        System Settings > General > Login Items & Extensions
-
-      Start the helper daemon (requires root for DriverKit HID access):
-        sudo brew services start mirroir-mcp
-
       Verify your setup:
         #{opt_bin}/mirroir-mcp doctor
 

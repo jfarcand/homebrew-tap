@@ -18,21 +18,9 @@ brew install mirroir-mcp
 
 | Formula | Version | Description |
 |---------|---------|-------------|
-| [mirroir-mcp](https://github.com/jfarcand/mirroir-mcp) | 0.18.0 | MCP server for controlling iPhone and any macOS window |
+| [mirroir-mcp](https://github.com/jfarcand/mirroir-mcp) | 0.19.0 | MCP server for controlling iPhone and any macOS window |
 
 ## Post-Install Setup
-
-Install Karabiner-Elements (required for tap/type/swipe):
-
-```bash
-brew install --cask karabiner-elements
-```
-
-Start the helper daemon:
-
-```bash
-sudo brew services start mirroir-mcp
-```
 
 Grant **Screen Recording** and **Accessibility** permissions to your terminal app, then add to your MCP client config:
 
