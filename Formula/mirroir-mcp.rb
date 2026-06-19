@@ -1,8 +1,8 @@
 class MirroirMcp < Formula
   desc "MCP server for controlling iPhone and any macOS window"
   homepage "https://github.com/jfarcand/mirroir-mcp"
-  url "https://github.com/jfarcand/mirroir-mcp/archive/refs/tags/v0.33.3.tar.gz"
-  sha256 "77d7c9ea8c0127707db3eb086aaa1fe63a6b2db166a930cda58b1a616b90c28b"
+  url "https://github.com/jfarcand/mirroir-mcp/archive/refs/tags/v0.34.0.tar.gz"
+  sha256 "233e7e2ef6bea44f6fdbdaf8761c9b813b90ffe013c174d4b290e59163f28427"
   license "Apache-2.0"
 
   depends_on :macos
