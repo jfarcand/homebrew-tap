@@ -8,19 +8,19 @@ class MirroirRun < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/jfarcand/mirroir-mcp/releases/download/runner-v0.3.0/mirroir-run-v0.3.0-aarch64-apple-darwin.tar.gz"
-      sha256 "5536cbfaf4681a7c01b74a0cdb3e3d236e99b9b27c317f2b791db9568bac98d2"
+      url "https://github.com/jfarcand/mirroir-mcp/releases/download/runner-v0.4.0/mirroir-run-v0.4.0-aarch64-apple-darwin.tar.gz"
+      sha256 "4fd13f9522cc50d5d8545b369f5eba9f755b54d670e742cb8c4f1c4f267ee4c3"
     end
     on_intel do
-      url "https://github.com/jfarcand/mirroir-mcp/releases/download/runner-v0.3.0/mirroir-run-v0.3.0-x86_64-apple-darwin.tar.gz"
-      sha256 "acfb2deb4c18768149195868e67913545c740f967834761424c9608c7654a374"
+      url "https://github.com/jfarcand/mirroir-mcp/releases/download/runner-v0.4.0/mirroir-run-v0.4.0-x86_64-apple-darwin.tar.gz"
+      sha256 "b8125b30cfb65ad70fe04bd4daa74ad93a04343660e0fd467c0238dec803cd38"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/jfarcand/mirroir-mcp/releases/download/runner-v0.3.0/mirroir-run-v0.3.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "431087e50488a0d6a4be3cf79715d682006f458c843d118bef12b4fe59b32734"
+      url "https://github.com/jfarcand/mirroir-mcp/releases/download/runner-v0.4.0/mirroir-run-v0.4.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "f437744a1619792f5afb43017087dd7b34c16071d007a7b749de2215303e8324"
     end
   end
 
