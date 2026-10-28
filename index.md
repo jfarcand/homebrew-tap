@@ -19,6 +19,7 @@ brew install mirroir-mcp
 | Formula | Version | Description |
 |---------|---------|-------------|
 | [mirroir-mcp](https://github.com/jfarcand/mirroir-mcp) | 0.41.0 | MCP server for controlling iPhone and any macOS window |
+| [pouletb](https://github.com/jfarcand/pouletb) | 0.2.0 | Download a single torrent from the command line, then exit or keep sharing it |
 
 ## Post-Install Setup
 
