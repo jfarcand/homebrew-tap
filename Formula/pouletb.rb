@@ -5,19 +5,19 @@ class Pouletb < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/jfarcand/pouletb/releases/download/v0.2.0/pouletb-v0.2.0-aarch64-apple-darwin.tar.gz"
-      sha256 "a620da0997d2eae7edafaa8ae1b31ced17dd8a9561690f9e172790588ea1f7c7"
+      url "https://github.com/jfarcand/pouletb/releases/download/v0.2.1/pouletb-v0.2.1-aarch64-apple-darwin.tar.gz"
+      sha256 "36ba7484edea26406644abb112b8ff3f36e12c3af4638dfca466687e97077c0b"
     end
     on_intel do
-      url "https://github.com/jfarcand/pouletb/releases/download/v0.2.0/pouletb-v0.2.0-x86_64-apple-darwin.tar.gz"
-      sha256 "804e501b9154d1d75f9d18da06bfdc55b2a4a050015dfdc0f7e00c7de1dc548a"
+      url "https://github.com/jfarcand/pouletb/releases/download/v0.2.1/pouletb-v0.2.1-x86_64-apple-darwin.tar.gz"
+      sha256 "779dfd9f565eb3c3cd3c8ab698c75966e87d18f8d710b44226215b01670f7ce7"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/jfarcand/pouletb/releases/download/v0.2.0/pouletb-v0.2.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "e079d1615fe3eb4810de29e7fec652112197db9021e4cd87aaeca68d5e1467d1"
+      url "https://github.com/jfarcand/pouletb/releases/download/v0.2.1/pouletb-v0.2.1-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "fd68725897a040bf174fbfd5c923943d8586dd0b8f8632acb6c8a4a734f1d14c"
     end
   end
 
